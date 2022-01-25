@@ -77,7 +77,7 @@ class PlusOne {
         }
     }
 
-    fun plusOne(digits: IntArray): IntArray {
+    private fun plusOne(digits: IntArray): IntArray {
         for (position in digits.indices.reversed()) {
             if (digits[position] < 9) {
                 digits[position] = digits[position] + 1
@@ -90,40 +90,4 @@ class PlusOne {
         result[0] = 1
         return result
     }
-
-//    fun plusOne(digits: IntArray): IntArray {
-//        // when they are all nines
-//        if (isAllNines(digits)) {
-//            // Set one more array
-//            val result = IntArray(digits.size + 1)
-//            result[0] = 1
-//            return result
-//        }
-//
-//        var pos = digits.size - 1
-//        var shouldContinue = true
-//        while (pos >= 0 && shouldContinue) {
-//            when(val value = digits[pos] + 1) {
-//                10 -> {
-//                    digits[pos] = 0
-//                    pos -=1
-//                } else ->  {
-//                    digits[pos] = value
-//                    shouldContinue = false
-//                }
-//            }
-//        }
-//
-//        return digits
-//    }
-//
-//    fun isAllNines(digits: IntArray): Boolean {
-//        for (position in digits.indices) {
-//            if (digits[position] != 9) {
-//                return false
-//            }
-//        }
-//
-//        return true
-//    }
 }
